@@ -5,7 +5,7 @@ export class Scene extends Container {
     constructor() {
         super();
 
-        const UIPauseMenu: UIPuseMenu = new UIPuseMenu();
+        const UIPauseMenu = new UIPuseMenu();
         this.addChild(UIPauseMenu)
     }
 };
