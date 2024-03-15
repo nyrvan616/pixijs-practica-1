@@ -30,5 +30,21 @@ export const assets = [
     
     //X
     { url: "./ui/icons/Icon_Small_Blank_X.png", name: "blankX" },
-    { url: "./ui/icons/Icon_Small_WhiteOutline_X.png", name: "whiteOutlineX" }
+    { url: "./ui/icons/Icon_Small_WhiteOutline_X.png", name: "whiteOutlineX" },
+
+    //Continue button
+    { url: "./ui/buttons/buttonContinue/buttonContinueDefault.png", name: "buttonContinueDefault" },
+    { url: "./ui/buttons/buttonContinue/buttonContinueDown.png", name: "buttonContinueDown" },
+    { url: "./ui/buttons/buttonContinue/buttonContinueOver.png", name: "buttonContinueOver" },
+
+    //Restart button
+    { url: "./ui/buttons/buttonRestart/buttonRestartDefault.png", name: "buttonRestartDefault" },
+    { url: "./ui/buttons/buttonRestart/buttonRestartDown.png", name: "buttonRestartDown" },
+    { url: "./ui/buttons/buttonRestart/buttonRestartOver.png", name: "buttonRestartOver" },
+    
+    //Close button
+    { url: "./ui/buttons/buttonCloseGame/buttonCloseGameDefault.png", name: "buttonCloseGameDefault" },
+    { url: "./ui/buttons/buttonCloseGame/buttonCloseGameDown.png", name: "buttonCloseGameDown" },
+    { url: "./ui/buttons/buttonCloseGame/buttonCloseGameOver.png", name: "buttonCloseGameOver" }
+
 ];
