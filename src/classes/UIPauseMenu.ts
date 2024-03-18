@@ -1,6 +1,7 @@
 import { Container, Sprite, Point, Text, Texture } from "pixi.js";
 import { app } from "..";
 import { Button } from "../ui/Button";
+import { Keyboard } from "../utils/Keyboard";
 
 export class UIPauseMenu extends Container {
     private buttonContinue:Button;
@@ -87,10 +88,28 @@ export class UIPauseMenu extends Container {
         lastKeyPressed.position.y = textBoxBlankSide.position.y;
         panelPausa.addChild(lastKeyPressed);
 
+        //document.addEventListener("keydown", this.onKeyDown.bind(this));
+
+        Keyboard.down.on("KeyB", this.onKeyB, this);
+        Keyboard.up.on("KeyB", this.onKeyBUp, this);
+
+
+    }
+
+    private onKeyB():void{
+        console.log("Apreté la b", this)
+    }
+
+    private onKeyBUp():void{
+        console.log("Solté la b", this)
     }
 
     private onButtonClick(){
-        console.log("New On button click!!");
+        console.log("New On button clicked!!", Keyboard.state.get("KeyA"));
     }
+
+    // private onKeyDown(e:KeyboardEvent){
+    //     console.log("Key Pressed!", e.code)
+    // }
     
 };

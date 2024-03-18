@@ -1,6 +1,7 @@
 import { Application, Loader } from 'pixi.js';
 import { assets } from './assets';
 import { Scene } from './scenes/Scene';
+import { Keyboard } from './utils/Keyboard';
 
 export const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -10,6 +11,8 @@ export const app = new Application({
 	width: 1280,
 	height: 720
 });
+
+Keyboard.initialize();
 
 window.addEventListener("resize", () => {
 	console.log("resized!");
