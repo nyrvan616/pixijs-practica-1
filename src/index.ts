@@ -1,6 +1,7 @@
 import { Application, Loader } from 'pixi.js';
 import { assets } from './assets';
 import { Scene } from './scenes/Scene';
+import { SceneTwo } from './scenes/SceneTwo';
 import { Keyboard } from './utils/Keyboard';
 
 export const app = new Application({
@@ -50,6 +51,9 @@ Loader.shared.add(assets);
 Loader.shared.onComplete.add(() => {
 	const myScene = new Scene();
 	app.stage.addChild(myScene)
+
+	const mySceneTwo = new SceneTwo();
+	app.stage.addChild(mySceneTwo)
 });
 
 Loader.shared.load();
