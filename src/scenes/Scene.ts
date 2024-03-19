@@ -9,3 +9,4 @@ export class Scene extends Container {
         this.addChild(PauseMenu)
     }
 };
+

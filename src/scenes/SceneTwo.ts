@@ -1,11 +1,20 @@
 import { Container } from "pixi.js";
 import { FairyAnimated } from "../classes/FairyAnimated";
+import { IUpdateable } from "../utils/IUpdateable";
 
-export class SceneTwo extends Container {
+
+export class SceneTwo extends Container implements IUpdateable {
+    private fairyAnimated: FairyAnimated;
     constructor() {
         super();
 
-        const fairyAnimated: FairyAnimated = new FairyAnimated();
-        this.addChild(fairyAnimated);
+        this.fairyAnimated = new FairyAnimated();
+        this.addChild(this.fairyAnimated);
+        
     }
+
+    public update(_deltaTime: number, deltaFrame: number): void {
+        this.fairyAnimated.update(deltaFrame);
+    }
+
 };

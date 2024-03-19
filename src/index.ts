@@ -1,4 +1,4 @@
-import { Application, Loader } from 'pixi.js';
+import { Application, Loader, Ticker } from 'pixi.js';
 import { assets } from './assets';
 import { Scene } from './scenes/Scene';
 import { SceneTwo } from './scenes/SceneTwo';
@@ -53,7 +53,11 @@ Loader.shared.onComplete.add(() => {
 	app.stage.addChild(myScene)
 
 	const mySceneTwo = new SceneTwo();
-	app.stage.addChild(mySceneTwo)
+	app.stage.addChild(mySceneTwo);
+
+	Ticker.shared.add(function (deltaFrame){
+		mySceneTwo.update(Ticker.shared.deltaMS, deltaFrame);
+	})
 });
 
 Loader.shared.load();

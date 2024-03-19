@@ -1,5 +1,6 @@
 import { AnimatedSprite, Container, Texture, Ticker } from "pixi.js";
 import { Keyboard } from "../utils/Keyboard";
+import { app } from "..";
 
 export class FairyAnimated extends Container {
     private fairyAnimated: AnimatedSprite;
@@ -28,7 +29,7 @@ export class FairyAnimated extends Container {
         Ticker.shared.add(this.update, this);
     }
 
-    private update(deltaFrame:number){
+    public update(deltaFrame:number){
         this.fairyAnimated.update(deltaFrame);
 
         if (Keyboard.state.get("KeyD")){
@@ -45,6 +46,22 @@ export class FairyAnimated extends Container {
 
         if (Keyboard.state.get("KeyS")){
             this.fairyAnimated.y++;
+        };
+
+        if(this.fairyAnimated.x > app.screen.width){
+            this.fairyAnimated.x = 0;
+        };
+
+        if(this.fairyAnimated.x < 0){
+            this.fairyAnimated.x = app.screen.width;
+        };
+
+        if(this.fairyAnimated.y > app.screen.height){
+            this.fairyAnimated.y = 0;
+        };
+
+        if(this.fairyAnimated.y < 0){
+            this.fairyAnimated.y = app.screen.height;
         };
     }
 };
