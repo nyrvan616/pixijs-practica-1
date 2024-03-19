@@ -22,6 +22,8 @@ export class FairyAnimated extends Container {
             false
         );
         this.fairyAnimated.position.set(700,200);
+        this.fairyAnimated.width = 150;
+        this.fairyAnimated.height = 150;
         this.fairyAnimated.play();
         this.fairyAnimated.animationSpeed = 0.4;
         this.addChild(this.fairyAnimated);

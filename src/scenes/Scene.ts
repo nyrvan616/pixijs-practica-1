@@ -1,5 +1,5 @@
 import { Container } from "pixi.js";
-import { UIPauseMenu } from "../classes/UIPauseMenu";
+import { UIPauseMenu } from "../game/UIPauseMenu";
 
 export class Scene extends Container {
     constructor() {

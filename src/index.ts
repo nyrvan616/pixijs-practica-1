@@ -3,6 +3,7 @@ import { assets } from './assets';
 import { Scene } from './scenes/Scene';
 import { SceneTwo } from './scenes/SceneTwo';
 import { Keyboard } from './utils/Keyboard';
+import { ScenePersonajeCorriendo } from './scenes/ScenePersonajeCorriendo';
 
 export const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -57,6 +58,13 @@ Loader.shared.onComplete.add(() => {
 
 	Ticker.shared.add(function (deltaFrame){
 		mySceneTwo.update(Ticker.shared.deltaMS, deltaFrame);
+	})
+
+	const scenePersonajeCorriendo = new ScenePersonajeCorriendo();
+	app.stage.addChild(scenePersonajeCorriendo);
+
+	Ticker.shared.add(function (deltaFrame){
+		scenePersonajeCorriendo.update(Ticker.shared.deltaMS, deltaFrame);
 	})
 });
 

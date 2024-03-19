@@ -55,6 +55,20 @@ export const assets = [
     { url:"./animations/fairy1/5.png", name: "FairyFlaying5" },
     { url:"./animations/fairy1/6.png", name: "FairyFlaying6" },
     { url:"./animations/fairy1/7.png", name: "FairyFlaying7" },
-    { url:"./animations/fairy1/8.png", name: "FairyFlaying8" }
+    { url:"./animations/fairy1/8.png", name: "FairyFlaying8" },
+
+    //Personaje Corriendo
+    { url:"./animations/personajeCorriendo/personajeCorriendo-1.png", name: "PersonajeCorriendo-1" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-2.png", name: "PersonajeCorriendo-2" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-3.png", name: "PersonajeCorriendo-3" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-4.png", name: "PersonajeCorriendo-4" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-5.png", name: "PersonajeCorriendo-5" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-6.png", name: "PersonajeCorriendo-6" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-7.png", name: "PersonajeCorriendo-7" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-8.png", name: "PersonajeCorriendo-8" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-9.png", name: "PersonajeCorriendo-9" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-10.png", name: "PersonajeCorriendo-10" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-11.png", name: "PersonajeCorriendo-11" },
+    { url:"./animations/personajeCorriendo/personajeCorriendo-12.png", name: "PersonajeCorriendo-12" }
 
 ];
