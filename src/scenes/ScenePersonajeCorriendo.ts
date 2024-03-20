@@ -16,7 +16,7 @@ export class ScenePersonajeCorriendo extends Container implements IUpdateable {
         this.physPersonajeCorriendo = new PhysicsContainer();
         this.physPersonajeCorriendo.speed.x = 0;
         this.physPersonajeCorriendo.speed.y = 0;
-        this.physPersonajeCorriendo.acceleration.set(0,0);
+        this.physPersonajeCorriendo.acceleration.set(100,100);
 
         this.addChild(this.physPersonajeCorriendo);
 
@@ -46,11 +46,7 @@ export class ScenePersonajeCorriendo extends Container implements IUpdateable {
             this.physPersonajeCorriendo.speed.y = this.physPersonajeCorriendo.speed.y * -1;
         } else if(this.physPersonajeCorriendo.y +this.physPersonajeCorriendo.height < 0){
             this.physPersonajeCorriendo.speed.y = this.physPersonajeCorriendo.speed.y * -1;
-        }
-
-        console.log("Velocidad: ", this.physPersonajeCorriendo.speed, this);
-        console.log("Aceleración: ", this.physPersonajeCorriendo.acceleration, this);
-        
+        }       
     }
 
 };
